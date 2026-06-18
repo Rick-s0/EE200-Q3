@@ -21,8 +21,8 @@ FAN_VALUE = 15
 MIN_DT = 1
 MAX_DT = 100
 
-DB_PATH = "/home/claude/fingerprints.db"
-SONG_LIST_PATH = "/home/claude/song_list.pkl"
+DB_PATH = "fingerprints.db"
+SONG_LIST_PATH = "song_list.pkl"
 SONG_DB_DIR = "/home/claude/song_db/EE200 Project Song Database"
 
 def load_audio(path, sr=SR, offset=0.0, duration=None):
