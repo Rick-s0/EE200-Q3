@@ -36,10 +36,12 @@ CMAP       = 'inferno'
 
 @st.cache_resource
 def download_database():
-    if not os.path.exists(DB_PATH):
-        file_id = "1gj0NM2sAcD-GO7mqbLHCRwY0xLxwq73Y" 
+    db_path = "fingerprints.db"
+    # If the file doesn't exist, OR if it's too small (an empty DB), download it
+    if not os.path.exists(db_path) or os.path.getsize(db_path) < 1000000: 
+        file_id = "1gj0NM2sAcD-GO7mqbLHCRwY0xLxwq73Y" # <-- MAKE SURE YOUR GOOGLE DRIVE ID IS HERE
         url = f"https://drive.google.com/uc?id={file_id}"
-        gdown.download(url, DB_PATH, quiet=False)
+        gdown.download(url, db_path, quiet=False)
 
 download_database()
 
