@@ -33,6 +33,15 @@ MAX_DT     = 100
 DB_PATH = "fingerprints.db"
 CMAP       = 'inferno'
 
+@st.cache_resource
+def download_database():
+    if not os.path.exists(DB_PATH):
+        file_id = "1gj0NM2sAcD-GO7mqbLHCRwY0xLxwq73Y" 
+        url = f"https://drive.google.com/uc?id={file_id}"
+        gdown.download(url, DB_PATH, quiet=False)
+
+download_database()
+
 # ── Core DSP ───────────────────────────────────────────────────────────────
 
 def load_audio_bytes(file_bytes, sr=SR):
