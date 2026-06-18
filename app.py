@@ -30,7 +30,7 @@ AMP_MIN    = -60
 FAN_VALUE  = 15
 MIN_DT     = 1
 MAX_DT     = 100
-DB_PATH    = "/home/claude/fingerprints.db"
+DB_PATH = "fingerprints.db"
 CMAP       = 'inferno'
 
 # ── Core DSP ───────────────────────────────────────────────────────────────
